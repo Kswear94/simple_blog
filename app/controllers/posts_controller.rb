@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   
   def new
-    @post = Posts.new
+    @post = Post.new
   end
   
 end
