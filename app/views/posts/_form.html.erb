@@ -1,29 +1,17 @@
-<% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@post.errors.count, "error") %> prohibited
-        this article from being saved:
-      </h2>
-      <ul>
-        <% @post.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-<% end %>
-
 <%= form_for(@post) do |f| %>
+  <%= render 'layouts/error_messages' %>
+    <div class="newTitle">
+      <%= f.label :title %><br />
+      <%= f.text_field :title, class: 'border' %>
+    </div>
+  
+    <div class="newContent">
+      <%= f.label :entry %><br />
+      <%= f.text_area :entry, class: 'border' %>
+    </div>
+  
     <p>
-        <%= f.label :title %>
-        <%= f.text_field :title %>
+      <%= f.submit %>
     </p>
-    
-    <p>
-        <%= f.label :text %>
-        <%= f.text_field :text %>
-    </p>
-    
-    <p>
-        <%= f.submit %>
-    </p>
+
 <% end %>

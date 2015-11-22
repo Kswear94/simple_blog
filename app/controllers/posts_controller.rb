@@ -24,16 +24,16 @@ class PostsController < ApplicationController
       flash[:success] = "Blog created successfully!"
       redirect_to @post
     else
-      redirect_to 'new'
+      render 'new'
     end
   end
   
   def update
     @post = Post.find(params[:id])
-    if @post.update
+    if @post.update(post_params)
       redirect_to @post
     else
-      redirect_to 'edit'
+      render 'edit'
     end
   end
   
@@ -47,7 +47,7 @@ class PostsController < ApplicationController
   private
   
     def post_params
-      params.require(:post).permit(:title, :text)
+      params.require(:post).permit(:title, :entry)
     end
   
 end

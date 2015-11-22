@@ -1,0 +1,166 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$gray-medium-light: #333333;
+
+body {
+  padding-top: 60px;
+  background: #F5F5F5;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea{
+  resize: both;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+table {
+   table-layout: fixed;
+   margin-left: auto;
+   margin-right: auto;
+   font-size: 1.25em;
+   width: 75%;
+   tr:nth-child(even) {
+      background: #CCC;
+      color: $gray-medium-light;
+   }
+   tr:nth-child(odd) {
+      background: $gray-medium-light;
+      color: #CCC;
+   }
+   th {
+      text-align: left;
+      padding: 10px;
+      width: 75%;
+   }
+   td {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      text-align: left;
+      padding: 10px;
+      width: 75%;
+      border-top: 1px solid $gray-medium-light;
+   }
+}
+
+.col-1 {
+   width: 25%;
+}
+.col-2 {
+   width: 30%;
+}
+
+.col-3, .col-4, .col-5 {
+   width: 15%;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+ /* Posts */
+
+.border {
+   padding: 2px;
+   border-radius: 10px 10px 0px 10px;
+   -moz-border-radius: 10px 10px 0px 10px;
+   -webkit-border-radius: 10px 10px 0px 10px;
+   border: 1px solid $gray-darker;
+}
+
+.newPost{
+   margin-left: auto;
+   margin-right: auto;
+   width: 100%;
+   .newTitle {
+      font-size: 1.5em;
+      padding: 0.5em;
+   }
+   .newContent {
+      font-size: 1.5em;
+      padding: 0.5em;
+   }
+}
+
+.post {
+   margin-left: auto;
+   margin-right: auto;
+   width: 70%;
+   .postTitle {
+      font-size: 1.5em;
+      padding: 0.5em;
+      margin-bottom: 1em;
+   }
+   .postContent {
+      font-size: 1.2em;
+      margin-bottom: 1em;
+   }
+}
+
+/* comments */
+.comment {
+   width: 30%;
+   padding: 4px;
+   border-radius: 10px 10px 10px 10px;
+   -moz-border-radius: 10px 10px 10px 10px;
+   -webkit-border-radius: 10px 10px 10px 10px;
+   border: 1px solid $gray-light;
+}
+
+/* _footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  small {
+    float: right;
+  }
+  ul {
+    float: left;
+    list-style: none;
+    li {
+      float: right;
+      margin-right: 15px;
+    }
+  }
+}
+
+/* errors */
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+}

@@ -1,12 +1,15 @@
 <%= form_for([@post, @post.comments.build]) do |f| %>
+  <%= render 'layouts/error_messages' %>
   <p>
-    <%= f.label :commenter %><br>
-    <%= f.text_field :commenter %>
+    <%= f.label :commenter %>:<br>
+    <%= f.text_field :commenter, class: 'border' %>
   </p>
+  
   <p>
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <%= f.label :body %>:<br>
+    <%= f.text_area :body, class: 'border' %>
   </p>
+  
   <p>
     <%= f.submit %>
   </p>

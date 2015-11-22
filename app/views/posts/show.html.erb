@@ -1,18 +1,19 @@
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
-  <%= @post.text %>
-</p>
+<div class="center post border">
+  <div class="postTitle">
+    <strong>Title:</strong>
+    <%= @post.title %>
+  </div>
+  
+  <div class="postContent">
+  <strong>Entry:</strong>
+  <%= @post.entry %>
+  </div>
+</div>
 
 <h2>Comments</h2>
 <%= render @post.comments %>
 
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
-
 
 <%= link_to 'Back', posts_path %>
