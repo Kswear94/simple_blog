@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   
-  http_basic_authenticate_with password: ENV["PASSWORD"], except: [:index, :show]
+  http_basic_authenticate_with name: " ", password: ENV["PASSWORD"], except: [:index, :show]
   
   def index
     @posts = Post.all
